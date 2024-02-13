@@ -1,0 +1,46 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #B1D8B7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+a{
+    text-decoration: none;
+    color: #2F5233;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 40px;
+}
+
+nav ul li:last-child{
+    margin-right: 0; /* Son nesnenin margini sıfırlandı*/
+}
+
+nav ul li a {
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    position: relative;
+}
+nav ul li a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0%;
+    background-color: #2F5233;
+    height: 2px;
+    transition: 300ms all;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
